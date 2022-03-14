@@ -1,0 +1,193 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    background-color: rgb(255, 174, 0);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#calculatorbody {
+    display: flex;
+    background-color: rgb(31, 31, 31)
+}
+
+#calculator {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1rem;
+    max-width: 470px;
+    max-height: 700px;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif ;
+    font-weight: lighter;
+}
+
+button {
+    padding: 2rem;
+    font-size: 1.5rem;
+    background-color: rgb(255, 174, 0);
+    border: 1px white solid;
+    border-radius: 15px;
+    width: 200px;
+    color: white;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+#calculator button{
+    padding: 20px;
+    width: 100px;
+    height: 70px;
+    border-radius: 0px;
+    background-color: white;
+    border: 1px solid grey;
+    color: black;
+    margin: 0.5rem;
+    transition: 0.2s;
+}
+
+
+#calculator button:hover {
+    background-color: lightgray;
+    color: black;
+    border: 1px solid black;
+}
+
+#is {
+    position: relative;
+}
+
+#output {
+    width: 460px;
+    height: 50px;
+    font-size: 20px;
+    
+}
+
+#output:focus {
+    outline: none;
+}
+
+#answerVield {
+    color: black;
+    position: absolute;
+    left: 950px;
+    top: 50px;
+    font-size: larger;
+    
+}
+
+/* colorblind test */ 
+
+#colorblind-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(39, 39, 39);
+}
+
+#wrapper {
+    display: grid;
+    grid-template-columns: 210px 210px 210px;
+    grid-template-rows: 210px 210px 210px;
+}
+
+#wrapper > div {
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    border-radius: 50px;
+}
+
+
+.shape:hover {
+    border: 2px solid white ;
+}
+
+h3 {
+    color: white;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+a{
+    color: white;
+}
+/* tik tak toe */ 
+
+#tiktaktoe-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(46, 46, 59);
+}
+
+#tiktaktoewrapper {
+    display: grid;
+    grid-template-columns: 202px 202px 200px;
+    grid-template-rows: 202px 202px 200px;
+    background-color: white;
+    border-radius: 75px;
+}
+
+#tiktaktoewrapper > div {
+    background-color: rgb(155, 155, 185);
+    height: 200px;
+    width: 200px;
+}
+
+#tiktaktoewrapper > div:hover {
+    opacity: 70%;
+}
+
+#square1 {
+    border-radius: 75px 0 0 0;
+}
+
+#square3 {
+    border-radius: 0 75px 0 0;
+}
+
+#square7 {
+    border-radius: 0 0 0 75px;
+}
+
+#square9 {
+    border-radius: 0 0 75px 0;
+}
+
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+
+#playerA {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 1rem;
+}
+
+#playerB {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 1rem;
+}
