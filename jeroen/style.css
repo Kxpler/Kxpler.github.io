@@ -1,0 +1,64 @@
+:root {
+    --orange: #ff9900;
+    --black: #1f1f1f;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: var(--black);
+    color: white;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding: 0.5rem;
+    background-color: var(--black) ;
+    border-bottom: var(--orange) 3px solid;
+}
+
+.right {
+    padding-left: 1rem;
+    display: flex;
+}
+
+#logo {
+}
+
+.btn {
+    padding: 0.25rem;
+}
+
+.btn > button {
+    padding: 0.75rem;
+    background-color: var(--orange);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+
+/* main content */
+.container {
+
+    display: flex;
+    flex-direction: row;
+}
+
+#info {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    background-color: var(--black);
+    border: var(--orange) 3px solid;
+    
+}
+
+#infotext {
+    display: flex;
+    flex-wrap: wrap;
+}
