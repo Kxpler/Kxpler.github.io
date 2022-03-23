@@ -12,6 +12,9 @@ console.log(answer);
 
 //lock de line als die vol zit
 // (j -1) % 5? 
+// empty row als het ingevulde woord niet bestaat
+// als een woord 2 of meer letters heeft en het antwoord niet, 
+// maakt hij maar 1 van die letters geel en niet allemaal
 
 document.getElementById("reload").style.backgroundColor = "rgba(117, 160, 68, 0.3)";
 document.getElementById("reload").onclick = function () {
