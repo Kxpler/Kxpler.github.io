@@ -11,7 +11,12 @@ var answer = randWordUpper.split("");
 console.log(answer);
 
 //lock de line als die vol zit
-//finish de game als alle woorden klopt
+// (j -1) % 5? 
+
+document.getElementById("reload").style.backgroundColor = "rgba(117, 160, 68, 0.3)";
+document.getElementById("reload").onclick = function () {
+    document.querySelector("h3").textContent = "Woord nog niet geraden";
+}
 
 function allBoxes(d) {
     let key;
@@ -45,6 +50,7 @@ function allBoxes(d) {
     if (j % 5 == 0) {
 
         console.log(wordString)
+        console.log(word);
         if (fiveLetterWords.includes(wordString.toLocaleLowerCase())) {
             if (word[0] == answer[0]) {
                 cells[j - 5].classList.add("Correct");
@@ -90,17 +96,26 @@ function allBoxes(d) {
             else {
                 cells[j - 1].classList.add("Incorrect");
             }
-
             word = [];
             wordString = "";
+
+
         } else {
+            word = [];
+            wordString = "";
             alert("Not a word");
         }
+
 
         // check if they all share the 'correct' class 
         if (cells[j - 5].className == cells[j - 4].className && cells[j - 4].className == cells[j - 3].className
             && cells[j - 3].className == cells[j - 2].className && cells[j - 2].className == cells[j - 1].className && cells[j - 1].className == "cell Correct") {
-            alert("Goed! je hebt het woord geraden");
+
+            document.getElementById("reload").style.backgroundColor = "rgb(0, 255, 64)";
+            document.querySelector("h3").textContent = "";
+            document.getElementById("reload").onclick = function () {
+                location.reload();
+            }
         }
     }
 }
@@ -130,8 +145,4 @@ function myKeyPress(e) {
 
 
     return key.toLocaleUpperCase();
-}
-
-function reload() {
-    location.reload();
 }
